@@ -18,3 +18,8 @@ RUN mkdir -p /app/data
 # Copy the binary from builder
 COPY --from=builder /app/expenseowl .
 
+# Expose the default port
+EXPOSE 8080
+
+# Run the server
+CMD ["./expenseowl"]
